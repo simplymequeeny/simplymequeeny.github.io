@@ -345,96 +345,68 @@ footer h4 {
 }
 
 /* media queries */
-@media screen and (max-width: 1200px) {
-    nav > ul { padding-left: 500px; }
-}
 
-@media screen and (max-width: 980px) {
-    h1 { font-size: 2.2em; }
-    h3 { font-size: 1.5em; }
+/* Tablet landscape */
+@media screen and (max-width: 1024px) {
+    nav > ul { padding-left: 40%; }
 
-    header { background-size: 980px auto; height: 400px; }
-    header a.logo { width: 145px; height: 60px; left: 4%;}
-    header div.hero { width: 35%; top:60%; left: 4%; }
+    header a.logo { width: 35%; left: 3%; }
+    header div.hero { left: 3%; }
 
     section.what-we-do article {
-        padding: 20px 20px 0 400px;
-        background-size: 350px auto;
-        background-position: 20px 120px;
-        min-height: initial;
-    }
-
-    section.testimonials { height: 500px; }
-    section.testimonials article .content { width: 80%; }
-    section.testimonials article .content h1 {
-        margin-bottom: 5%;
-    }
-
-    section.product article {
-        background-position: 400px;
-        background-size: 420px auto;
-    }
-    section.product article .content { width: 80%; }
-    section.product article p { width: 60%;}
-    section.product article img { height: 60px;  }
-
-    section.contact-us article .content { margin-top: 0; width: 90%; padding-top: 0; }
-    section.contact-us aside .content h3 { margin-bottom: 0; }
-    section.contact-us aside .content.contact-email {
-        background-size: 35px 35px;
-    }
-    section.contact-us aside .content.contact-location {
-        background-size: 35px 35px;
-    }
-    section.contact-us aside .content.contact-phone {
-        background-size: 35px 35px;
-    }
-
-    nav { padding: 60px 0 0 0; }
-    nav > ul { padding-left: 400px; }
-    nav ul li a { font-size: .9em; }
-}
-
-@media screen and (max-width: 800px) {
-    h1 { font-size: 1.8em; }
-    h2 { font-size: 1.4em; }
-    h3 { font-size: 1.1em; }
-    a.btn {font-size: 1em; }
-
-    header { background-size: 800px auto; height: 300px; }
-    header a.logo { width: 200px; height: 50px; left: 3%; }
-    header div.hero { width: 35%; top:50%; left: 3%; }
-
-    section.what-we-do { padding: 15px 30px; }
-    section.what-we-do article {
-        padding: 0 0 0 330px;
-        background-size: 300px auto;
+        padding: 0 0 0 360px;
+        background-size: 340px auto;
         background-position: 0 120px;
-        min-height: initial;
+        min-height: 450px;
     }
 
     section.testimonials { height: 400px; }
-    section.testimonials article .content { width: 95%; }
+    section.testimonials article .content { width: 85%; }
     section.testimonials article .content h1 {
         margin-bottom: 3%;
     }
+}
+
+@media screen and (max-width: 768px) {
+    h1 { font-size: 2.2em; }
+    h3 { font-size: 1.5em; margin-bottom: 0; }
+    a.btn { font-size: 1em; }
+
+    nav { padding: 40px 0 0 0; }
+    nav > ul { padding-left: 25%; }
+    nav ul li a { font-size: .9em; }
+
+    header { background-size: 768px auto; height: 300px; }
+    header a.logo { width: 150px; height: 50px; left: 6%; }
+    header div.hero { width: 100%; top:50%; left: 6%; }
+    header div.hero h1 { margin-bottom: .5em; }
+
+    section.what-we-do article {
+        padding: 10px 0 0 0;
+        background-size: 180px auto;
+        background-position: 420px top;
+        min-height: 300px;
+    }
+
+    section.testimonials article .content { width: 95%; }
 
     section.product {
-        padding-top: 0;
+        padding-top: 15px;
         padding-left: 100px;
         padding-right: 0;
-        height: 350px;
+        height: 300px;
     }
     section.product article {
-        background-position: 360px 50px;
+        background-position: 80% 0;
         background-size: 250px auto;
-        padding-top: 100px;
+        padding-top: 20px;
         margin-bottom: 0;
-        min-height: 350px;
+        min-height: 400px;
     }
     section.product article p { width: 70%; }
     section.product article img { height: 50px;  }
 
+    section.contact-us article { width: 100%; padding: 0; margin: 0; }
     section.contact-us aside .content.contact-email {
         background-size: 30px 30px;
     }
@@ -444,62 +416,26 @@ footer h4 {
     section.contact-us aside .content.contact-phone {
         background-size: 30px 30px;
     }
-
-    nav { padding: 40px 0 0 0; }
-    nav > ul { padding-left: 250px; }
-    nav ul li a { font-size: .9em; }
 }
 
-@media screen and (max-width: 768px) {
-    header { background-size: 768px auto; height: 200px; }
-    header a.logo { width: 100px; height: 40px; left: 3%; }
-    header div.hero { width: 30%; top:50%; left: 3%; }
-    header div.hero h1 { font-size: 2em; line-height: .5em; margin: 0 0 15px 0;}
-
-    nav { padding: 30px 0 0 0; }
-    nav > ul { padding-left: 280px; }
-    nav ul li a { font-size: .7em; }
-}
-
-@media screen and (max-width: 625px) {
+@media screen and (max-width: 600px) {
     h1 { font-size: 1em; }
-    h3 { font-size: .9em; margin-bottom: 0; }
-    a.btn { font-size: .9em; }
+    h3 { font-size: .9em; }
+    a.btn { font-size: .7em; }
 
-    header { background-size: 625px auto; height: 260px; background-position: right top; }
-    header a.logo {
-        width: 30%; height: 100px; left: 70px; top: 5px;
-        background-size: 112px 46px;
-        background-position: 20px center;
-    }
-
-    header div.hero { width: 200px; top: 150px; left: 90px; }
+    header { background-size: 600px auto; height: 260px; background-position: right top; }
+    header a.logo { width: 200px; top: 15px; }
+    header div.hero { width: 50%; top: 170px; }
     header div.hero h1 { margin-bottom: 15px; }
 
+    section.what-we-do { padding-left: 30px; }
     section.what-we-do article {
-        padding: 90px 20px 0 0;
-        background-size: 200px auto;
-        background-position: left top;
+        padding: 40px 0 0 0;
+        background-size: 150px auto;
+        background-position: right top;
         min-height: initial;
     }
 
-    section.product {
-        padding-top: 20px;
-        height: 200px;
-        padding-left: 50px;
-        float: none;
-    }
-    section.product article {
-        padding-top: 40px;
-        background-size: 180px auto;
-        background-position: 350px top;
-        min-height: 250px;
-        margin: 5px;
-    }
-    section.product article p { width: 100%; }
-    section.product article img { height: 40px; padding: 0; }
-
-    section.contact-us article { width: 100%; padding: 10px; }
     section.contact-us aside { width: 100%; float: none; text-align: left;   }
     section.contact-us aside .content.contact-location p { margin: 0; }
     section.contact-us div.contact-row {
@@ -513,48 +449,32 @@ footer h4 {
         background-position: 60px 5px;
     }
 
-    nav { width: 300px; }
-    nav > ul > li { float: none; width: 150px; padding-left: 100px; font-size: 1.2em; }
+    nav { margin: 0; }
+    nav > ul { padding: 50px 35px;  }
+    nav > ul > li { float: left; font-size: .9em; }
 
     footer { margin: 0; padding: 0; }
     footer h1 { margin: 0; padding: 0; }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
     h1 { font-size: .8em; }
     h3 { font-size: .6em; }
     a.btn { font-size: .9em;  }
 
-    header { background-size: 425px auto; height: 300px; background-position: right top; }
-    header a.logo {
-        width: 30%;
-        left: 20px;
-        background-position: 5px center;
-    }
+    header a.logo { left: 250px; margin-right: 0; }
+    header div.hero { width: 50%; left: 233px; top: 150px; }
+    header div.hero h1 { margin-bottom: 15px; font-size: 1em; }
 
-    header div.hero { width: 200px; top: 200px; left: 20px; }
+    section.what-we-do { margin: 0; padding: 5px 20px; }
+    section.what-we-do article { padding: 50px 0 0 0; }
 
-    section.what-we-do article {
-        padding: 90px 0 0 0;
-        background-size: 150px auto;
-        background-position: right top;
-        min-height: initial;
-    }
-
-    section.testimonials {
-        height: 350px;
-    }
-    section.testimonials article {
-        padding: 15px 0;
-    }
-    section.testimonials article .content {
-        width: 100%;
-    }
-    section.testimonials article .content h1 {
-        margin-bottom: 1%;
-    }
+    section.testimonials { height: 300px; padding-bottom: 0; }
+    section.testimonials article { padding: 15px 0; }
+    section.testimonials article .content { width: 100%; }
+    section.testimonials article .content h1 { margin-bottom: 0; }
     section.testimonials article .content blockquote {
-        background-position: 90px top;
+        background-position: 140px top;
         display: block;
         margin: 0;
         height: 150px;
@@ -577,41 +497,67 @@ footer h4 {
     }
 
     section.product {
-        margin: 0;
-        padding: 10px;
-        height: 300px;
+        padding-top: 20px;
+        height: 200px;
+        padding-left: 40px;
         float: none;
-    }
-    section.product article {
-        padding-top: 10px;
-        background-size: 180px auto;
-        background-position: 180px top;
-        min-height: 300px;
-        margin: 5px 0;
     }
     section.product article p { width: 100%; }
     section.product article img { height: 40px; padding: 0; }
-
-    section.contact-us { margin: 0; padding: 0; }
-    section.contact-us article { width: 100%; padding: 0; margin: 0; }
-    section.contact-us div.contact-row { padding-bottom: 0; }
-    section.contact-us aside div.content {
-        margin: 0;
-        padding: 0px 0 5px 70px;
-        background-size: 15px 15px;
-        background-position: 15px 5px;
+    section.product article {
+        padding-top: 40px;
+        background-size: 180px auto;
+        min-height: 250px;
     }
 
-    nav { width: 200px; }
-    nav > ul { padding-top: 10px; padding-left: 230px; }
-    nav > ul > li { float: none; width: 150px; padding-left: 0; font-size: 1.1em; }
+    nav { width: 250px; }
+    nav > ul { padding: 0 25px;  }
+    nav > ul > li { float: none; font-size: .8em; }
 }
 
 @media screen and (max-width: 320px) {
     h1 { font-size: .8em; }
     h3 { font-size: .6em; }
     h4 { font-size: .6em; }
-    a.btn { font-size: .9em;  }
+
+    header a.logo { left: 150px; }
+    header div.hero { width: 50%; left: 153px; }
+    header div.hero h1 { margin-bottom: 15px; font-size: .8em; }
+
+    section.testimonials { height: 370px; }
+    section.testimonials article .content blockquote {
+        background-position: 60px top;
+    }
+
+    section.product {
+        padding: 5px 10px;
+        height: 250px;
+        width: auto;
+        margin: 0;
+    }
+    section.product article img { height: 30px; padding: 0; }
+    section.product article {
+        padding: 0;
+        background-size: 150px auto;
+        background-position: 120px 120px;
+        min-height: 380px;
+    }
+
+    section.contact-us { margin:0; padding: 0; width: 100%; }
+    section.contact-us aside div.content {
+        margin: 0;
+        padding: 0 0 10px 80px;
+        background-size: 10px 10px;
+        background-position: 35px 5px;
+    }
+
+    nav { width: 170px; }
+}
+
+/*
+
+
+
 
     header { background-size: 500px auto; height: 350px; background-position: right top; }
     header a.logo { padding-top: 100px; }
@@ -654,3 +600,4 @@ footer h4 {
     nav { width: 10px; }
     nav > ul { padding-top: 0; padding-left: 170px; }
 }
+*/
