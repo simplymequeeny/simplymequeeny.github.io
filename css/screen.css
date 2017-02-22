@@ -462,6 +462,7 @@ footer h4 {
     h3 { font-size: .6em; }
     a.btn { font-size: .9em; }
 
+    header { background-size: 480px auto; height: 260px; background-position: left top; }
     header a.logo { left: 250px; margin-right: 0; }
     header div.hero { width: 50%; left: 233px; top: 150px; }
     header div.hero h1 { margin-bottom: 15px; font-size: 1em; }
@@ -515,6 +516,29 @@ footer h4 {
     nav > ul > li { float: none; font-size: .8em; }
 }
 
+@media screen and (max-width: 414px) {
+    header { background-size: 414px auto; height: 250px; background-position: left top; }
+    header a.logo { top: 25px; width: 100px;}
+    header div.hero { left: 240px; top: 150px; }
+
+    section.testimonials { height: 330px; }
+    section.testimonials article h1 { padding-bottom: 10px; }
+    section.testimonials article .content blockquote {
+        background-position: 110px top;
+    }
+
+    section.product {
+        padding-left: 40px;
+
+    }
+    section.product article img { padding: 0; }
+    section.product article {
+        padding-top: 10px;
+        min-height: 300px;
+        background-position: 160px 25px;
+    }
+}
+
 @media screen and (max-width: 375px) {
     h1 { font-size: .8em; }
     h3 { font-size: .6em; }
@@ -527,7 +551,6 @@ footer h4 {
     header div.hero h1 { margin-bottom: 15px; font-size: .8em; }
 
     section.testimonials { height: 370px; }
-    section.testimonials article h1 { padding-bottom: 10px; }
     section.testimonials article .content blockquote {
         background-position: 90px top;
     }
@@ -561,8 +584,14 @@ footer h4 {
 @media screen and (max-width: 320px) {
     header a.logo { left: 170px; }
     header div.hero { left: 168px; }
+    a.btn { font-size: .5em; }
 
     section.testimonials article .content blockquote {
-        background-position: 68px top;
+        background-position: 58px top;
+    }
+
+    section.product article {
+        padding: 0 5px;
+        background-position: 160px 110px;
     }
 }
