@@ -407,6 +407,26 @@ footer h4 {
     }
 }
 
+@media screen and (max-width: 667px) {
+    nav { padding: 50px 0 0 0; }
+    nav > ul { padding-left: 25%; }
+    nav ul li a { font-size: .7em; }
+
+    section.what-we-do { padding-left: 30px; }
+    section.what-we-do article {
+        padding: 40px 0 0 0;
+        background-size: 200px auto;
+        background-position: right top;
+    }
+
+    section.product {
+        padding-left: 50px;
+    }
+    section.product article {
+        background-position: 90% 0;
+    }
+}
+
 @media screen and (max-width: 600px) {
     h1 { font-size: 1em; }
     h3 { font-size: .9em; }
@@ -417,11 +437,9 @@ footer h4 {
     header div.hero { width: 50%; top: 170px; }
     header div.hero h1 { margin-bottom: 15px; }
 
-    section.what-we-do { padding-left: 30px; }
     section.what-we-do article {
         padding: 40px 0 0 0;
         background-size: 150px auto;
-        background-position: right top;
         min-height: initial;
     }
 
@@ -440,10 +458,15 @@ footer h4 {
 
     nav { margin: 0; }
     nav > ul { padding: 50px 35px;  }
-    nav > ul > li { float: left; font-size: .9em; }
+
 
     footer { margin: 0; padding: 0; }
     footer h1 { margin: 0; padding: 0; }
+}
+
+@media screen and (max-width: 568px) {
+    header { background-size: 568px auto; height: 260px; background-position: right top; }
+    nav > ul > li { float: left; font-size: 1em; }
 }
 
 @media screen and (max-width: 480px) {
@@ -528,6 +551,21 @@ footer h4 {
     }
 }
 
+@media screen and (max-width: 384px) {
+    a.btn { font-size: .8em; }
+
+    header a.logo { left: 220px; top: 30px; }
+    header div.hero { left: 200px; top: 140px; }
+
+    section.testimonials article .content blockquote {
+        background-position: 90px top;
+    }
+
+    section.product {
+        height: 220px;
+    }
+}
+
 @media screen and (max-width: 375px) {
     h1 { font-size: .8em; }
     h3 { font-size: .6em; }
@@ -540,9 +578,6 @@ footer h4 {
     header div.hero h1 { margin-bottom: 15px; font-size: .8em; }
 
     section.testimonials { height: 370px; }
-    section.testimonials article .content blockquote {
-        background-position: 90px top;
-    }
 
    section.product {
        padding: 10px 10px;
