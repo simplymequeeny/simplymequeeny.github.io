@@ -208,9 +208,7 @@ section.product aside p {
 
 /* section contact-us */
 section.contact-us {
-    z-index: -1;
-    background-image: url(../images/dark-bg.png);
-    position: relative;;
+    background-color: #3b4e5b;
 }
 
 section.contact-us article {
@@ -258,15 +256,6 @@ section.contact-us .content {
     background: no-repeat center top;
     background-size: 50px 41px;
     padding-top: 45px;
-}
-
-.email a {
-    color: white;
-    text-decoration: none;
-}
-
-.email a:hover {
-    text-decoration: underline;
 }
 
 section.contact-us aside .content.contact-email {
