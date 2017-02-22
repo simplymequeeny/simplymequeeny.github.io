@@ -519,7 +519,7 @@ footer h4 {
 @media screen and (max-width: 414px) {
     header { background-size: 414px auto; height: 250px; background-position: left top; }
     header a.logo { top: 25px; width: 100px;}
-    header div.hero { left: 240px; top: 150px; }
+    header div.hero { left: 240px; top: 150px; width: 30%; }
 
     section.testimonials { height: 330px; }
     section.testimonials article h1 { padding-bottom: 10px; }
@@ -547,7 +547,7 @@ footer h4 {
 
     header { background-size: 375px auto; height: 200px; background-position: left top; }
     header a.logo { left: 220px; height: 40px; top: 5px; width: 100px;}
-    header div.hero { width: 30%; left: 200px; top: 100px; }
+    header div.hero { left: 200px; top: 100px; }
     header div.hero h1 { margin-bottom: 15px; font-size: .8em; }
 
     section.testimonials { height: 370px; }
