@@ -1,618 +1,888 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700,700i');
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: #555;
-    margin: 0;
-    padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #555;
+  margin: 0;
+  padding: 0;
 }
 
 #page {
-    max-width: 1366px;
-    margin: 0 auto;
-    position: relative;
+  max-width: 1366px;
+  margin: 0 auto;
+  position: relative;
 }
 
 /* text */
 h1 {
-    margin: 0 0 1em 0;
-    font-size: 2.8em;
-    font-weight: 700;
+  margin: 0 0 1em 0;
+  font-size: 2.8em;
+  font-weight: 700;
 }
 
 h2 {
-    margin: 0 0 .5em 0;
-    font-size: 1.6em;
-    font-weight: 700;
-    line-height: 1.1em;
+  margin: 0 0 .5em 0;
+  font-size: 1.6em;
+  font-weight: 700;
+  line-height: 1.1em;
 }
 
 h3 {
-    margin: 0 0 .5em 0;
-    font-size: 1.6em;
-    font-weight: 700;
+  margin: 0 0 .5em 0;
+  font-size: 1.6em;
+  font-weight: 700;
 }
 
 h4 {
-    margin: 0 0 1.5em 0;
-    font-size: 1em;
-    font-weight: 700;
+  margin: 0 0 1.5em 0;
+  font-size: 1em;
+  font-weight: 700;
 }
 
 p {
-    margin: 0 0 1em 0;
+  margin: 0 0 1em 0;
 }
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 a:visited {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a.btn {
-    font-size: 1.2em;
-    border: 1px solid white;
-    padding: 4px 15px;
-    transition: background-color .5s;
+  font-size: 1.2em;
+  border: 1px solid white;
+  padding: 4px 15px;
+  transition: background-color .5s;
 }
 
 a.btn:hover {
-    background-color: #3b4e5b;
+  background-color: #3b4e5b;
 }
 
 /* header */
 header {
-    height: 557px;
-    background: #3b4e5b url(../images/header-bg.png) no-repeat center bottom;
-    position: relative;;
+  height: 557px;
+  background: #3b4e5b url(../images/header-bg.png) no-repeat center bottom;
+  position: relative;;
 }
 
 header a.logo {
-    z-index: 1;
-    position: absolute;
-    display: block;
-    width: 150px;
-    height: 65px;
-    background: url(../images/logo.png) no-repeat 0 0;
-    background-size: contain;
-    top: 10%;
-    left: 10%;
+  z-index: 1;
+  position: absolute;
+  display: block;
+  width: 150px;
+  height: 65px;
+  background: url(../images/logo.png) no-repeat 0 0;
+  background-size: contain;
+  top: 10%;
+  left: 10%;
 }
 
 header a.logo span {
-    display: none;
+  display: none;
 }
 
 header div.hero {
-    position: absolute;
-    width: 42%;
-    top: 60%;
-    left: 10%;
+  position: absolute;
+  width: 60%;
+  top: 55%;
+  left: 10%;
 }
 
 header div.hero h1 {
-    line-height: 1em;
-    margin: 0 0 30px 0;
-    color: white;
+  line-height: 1em;
+  margin: 0 0 30px 0;
+  color: white;
 }
 
 /* section all */
 section {
-    padding: 0 30px;
+  padding: 0 30px;
 }
 
 section::after {
-    content: '';
-    display: block;
-    clear: both;
+  content: '';
+  display: block;
+  clear: both;
 }
 
 /* section what we do */
 section.what-we-do {
-    padding: 30px 70px;
+  padding: 30px 70px;
 }
 
 section.what-we-do article {
-    padding: 0 20px 0 550px;
-    background: url(../images/manakn.png) no-repeat 5% 30%;
-    min-height: 220px;
+  padding: 0 0 0 550px;
+  background: url(../images/manakn.png) no-repeat 5% 30%;
+  min-height: 220px;
 }
 
 section.what-we-do article h1 {
-    color: #3b4e5b;
+  color: #3b4e5b;
 }
 
 /* section testimonial */
+
 section.testimonials {
-    height: 595px;
-    background: #d8f2c7 url(../images/testemonials_full.jpg) no-repeat center bottom;
-    position: relative;;
+  height: 595px;
+  background: #d8f2c7 url(../images/testemonials_full.jpg) no-repeat center bottom;
+  position: relative;;
 }
 
 section.testimonials article {
-    color: #3b4e5b;
-    padding-top: 70px;
-    padding-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
+  color: #3b4e5b;
+  padding-top: 180px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 section.testimonials article .content {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
 }
 
 section.testimonials article .content h1 {
-    margin-bottom: 10%;
-    text-align: center;
+  margin-bottom: 10%;
+  text-align: center;
 }
 
 section.testimonials article .content blockquote {
-    background: url(../images/man.png) no-repeat 0 20px;
-    display: block;
-    margin-bottom: 15px;
-    height: 150px;
+  background: url(../images/man.png) no-repeat 0 20px;
+  display: block;
+  margin-bottom: 15px;
+  height: 150px;
 }
 
 section.testimonials article .content blockquote p {
-    margin: 5px 5px 20px 150px;
+  margin: 5px 5px 20px 150px;
 }
 
 section.testimonials article .content blockquote p.credit {
-    color: darkslategrey;
-    font-size: 2em;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 2em;
+  color: darkslategrey;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 2em;
 }
 
 section.testimonials article .content blockquote p.credit small {
-    font-size: small;
+  font-size: small;
 }
 
 /** section product */
 section.product {
-    height: 509px;
-    padding: 50px 70px;
+  height: 509px;
+  padding-top: 50px;
 }
 
 section.product article {
-    float: right;
-    padding: 200px 200px 0 0;
-    background: url(../images/iphone.png) no-repeat 80% 50%;
-    min-height: 549px;
+  float: right;
+  padding-left: 5%;
+  background: url(../images/iphone.png) no-repeat 820px 0;
+  min-height: 700px;
 }
 
 section.product article p {
-    width: 50%;
+  width: 55%;
 }
 
 section.product article img {
-    padding-top: 30px;
-}
-
-section.product aside h1 {
-    text-align: center;
-}
-
-section.product aside p {
-    padding-bottom: 25px;
+  padding-top: 30px;
 }
 
 /* section contact-us */
 section.contact-us {
-    background-color: #3b4e5b;
+  background-color: #3b4e5b;
 }
 
 section.contact-us article {
-    padding: 0 5% 1%;
+  padding: 0 5% 1%;
 }
 
 section.contact-us article .content {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
 
-section.contact-us article h1  {
-    color: #d8f2c7;
+section.contact-us article h1 {
+  color: #d8f2c7;
 }
 
 section.contact-us article p {
-    color: white;
+  color: white;
 }
 
 section.contact-us div.contact-row {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    padding-bottom: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding-bottom: 15%;
 }
 
 section.contact-us aside {
-    width: 33%;
-    float: left;
-    text-align: center;
+  width: 33%;
+  float: left;
+  text-align: center;
 }
 
 section.contact-us aside h3 {
-    color: #d8f2c7;
+  color: #d8f2c7;
 }
 
 section.contact-us aside p {
-    color: white;
-    margin-bottom: 0;
+  color: white;
+  margin-bottom: 0;
 }
 
 section.contact-us .content {
-    margin: 15px;
-    background: no-repeat center top;
-    background-size: 50px 41px;
-    padding-top: 45px;
+  margin: 15px;
+  background: no-repeat center top;
+  background-size: 50px 41px;
+  padding-top: 45px;
 }
 
 section.contact-us aside .content.contact-email {
-    background-image: url(../images/email.png);
-    background-size: 41px 41px;
+  background-image: url(../images/email.png);
+  background-size: 41px 41px;
 }
 
 section.contact-us aside .content.contact-location {
-    background-image: url(../images/location.png);
-    background-size: 41px 41px;
+  background-image: url(../images/location.png);
+  background-size: 41px 41px;
 }
 
 section.contact-us aside .content.contact-phone {
-    background-image: url(../images/phone.png);
-    background-size: 41px 41px;
+  background-image: url(../images/phone.png);
+  background-size: 41px 41px;
 }
 
 /* navigation */
 nav {
-    background-color: transparent;
-    position: absolute;;
-    top: 0;
-    left: 0;
-    padding: 80px 0 0 0;
-    width: 100%;
+  background-color: transparent;
+  position: absolute;;
+  top: 0;
+  left: 0;
+  padding: 80px 0 0 0;
+  width: 100%;
 }
 
 nav::after {
-    content: '';
-    display: block;
-    clear: both;
+  content: '';
+  display: block;
+  clear: both;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
-    display: inline-block;
-    font-weight: bold;
-    color: white;
-    padding: 10px 20px;
-    position: relative;;
+  display: inline-block;
+  font-weight: bold;
+  color: white;
+  padding: 10px 20px;
+  position: relative;;
 }
 
 nav ul li a:hover {
-    background-color: #3b4e5b;
-    border-radius: 25px;
+  background-color: #3b4e5b;
+  border-radius: 25px;
 }
 
 nav ul li a:active {
-    background-color: #3b4e5b;
+  background-color: #3b4e5b;
 }
 
 nav > ul {
-    padding-left: 600px;
+  padding-left: 630px;
 }
 
 nav > ul > li {
-    float: left;
+  float: left;
 }
 
 /* footer */
 footer {
-    padding: 1%;
-    text-align: center;
+  padding: 1%;
+  text-align: center;
 }
 
 footer h4 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* media queries */
 
 /* Tablet landscape */
 @media screen and (max-width: 1024px) {
-    nav > ul { padding-left: 40%; }
+  nav > ul {
+    padding-left: 40%;
+  }
 
-    header a.logo { width: 35%; left: 3%; }
-    header div.hero { left: 3%; }
+  header a.logo {
+    width: 35%;
+    left: 3%;
+  }
 
-    section.what-we-do article {
-        padding: 0 0 0 360px;
-        background-size: 340px auto;
-        background-position: 0 120px;
-        min-height: 450px;
-    }
+  header div.hero {
+    left: 3%;
+  }
 
-    section.testimonials { height: 400px; }
-    section.testimonials article .content { width: 85%; }
-    section.testimonials article .content h1 {
-        margin-bottom: 3%;
-    }
+  section.what-we-do article {
+    padding: 0 0 0 360px;
+    background-size: 340px auto;
+    background-position: 0 120px;
+    min-height: 450px;
+  }
+
+  section.testimonials {
+    height: 400px;
+  }
+
+  section.testimonials article .content {
+    width: 85%;
+  }
+
+  section.testimonials article .content h1 {
+    margin-bottom: 3%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    h1 { font-size: 2.2em; }
-    h3 { font-size: 1.5em; margin-bottom: 0; }
-    a.btn { font-size: 1em; }
+  h1 {
+    font-size: 2.2em;
+  }
 
-    nav { padding: 40px 0 0 0; }
-    nav > ul { padding-left: 25%; }
-    nav ul li a { font-size: .9em; }
+  h3 {
+    font-size: 1.5em;
+    margin-bottom: 0;
+  }
 
-    header { background-size: 768px auto; height: 300px; }
-    header a.logo { width: 150px; height: 50px; left: 6%; }
-    header div.hero { width: auto; top:50%; left: 6%; }
-    header div.hero h1 { margin-bottom: .5em; }
+  a.btn {
+    font-size: 1em;
+  }
 
-    section.what-we-do article {
-        padding: 10px 0 0 0;
-        background-size: 180px auto;
-        background-position: 420px top;
-        min-height: 300px;
-    }
+  nav {
+    padding: 40px 0 0 0;
+  }
 
-    section.testimonials article .content { width: 95%; }
+  nav > ul {
+    padding-left: 25%;
+  }
 
-    section.product {
-        padding-top: 15px;
-        padding-left: 100px;
-        padding-right: 0;
-        height: 300px;
-    }
-    section.product article {
-        background-position: 80% 0;
-        background-size: 250px auto;
-        padding-top: 20px;
-        margin-bottom: 0;
-        min-height: 400px;
-    }
-    section.product article p { width: 70%; }
-    section.product article img { height: 50px;  }
+  nav ul li a {
+    font-size: .9em;
+  }
 
-    section.contact-us article { width: 100%; padding: 0; margin: 0; }
-    section.contact-us aside .content.contact-email {
-        background-size: 30px 30px;
-    }
-    section.contact-us aside .content.contact-location {
-        background-size: 30px 30px;
-    }
-    section.contact-us aside .content.contact-phone {
-        background-size: 30px 30px;
-    }
+  header {
+    background-size: 768px auto;
+    height: 300px;
+  }
+
+  header a.logo {
+    width: 150px;
+    height: 50px;
+    left: 6%;
+  }
+
+  header div.hero {
+    width: auto;
+    top: 50%;
+    left: 6%;
+  }
+
+  header div.hero h1 {
+    margin-bottom: .5em;
+  }
+
+  section.what-we-do article {
+    padding: 10px 0 0 0;
+    background-size: 180px auto;
+    background-position: 420px top;
+    min-height: 300px;
+  }
+
+  section.testimonials article .content {
+    width: 95%;
+  }
+
+  section.product {
+    padding-top: 15px;
+    padding-left: 100px;
+    padding-right: 0;
+    height: 300px;
+  }
+
+  section.product article {
+    background-position: 80% 0;
+    background-size: 250px auto;
+    padding-top: 20px;
+    margin-bottom: 0;
+    min-height: 400px;
+  }
+
+  section.product article p {
+    width: 70%;
+  }
+
+  section.product article img {
+    height: 50px;
+  }
+
+  section.contact-us article {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  section.contact-us aside .content.contact-email {
+    background-size: 30px 30px;
+  }
+
+  section.contact-us aside .content.contact-location {
+    background-size: 30px 30px;
+  }
+
+  section.contact-us aside .content.contact-phone {
+    background-size: 30px 30px;
+  }
 }
 
 @media screen and (max-width: 667px) {
-    nav { padding: 50px 0 0 0; }
-    nav > ul { padding-left: 25%; }
-    nav ul li a { font-size: .7em; }
+  nav {
+    padding: 50px 0 0 0;
+  }
 
-    section.what-we-do { padding-left: 30px; }
-    section.what-we-do article {
-        padding: 40px 0 0 0;
-        background-size: 200px auto;
-        background-position: right top;
-    }
+  nav > ul {
+    padding-left: 25%;
+  }
 
-    section.product {
-        padding-left: 50px;
-    }
-    section.product article {
-        background-position: 90% 0;
-    }
+  nav ul li a {
+    font-size: .7em;
+  }
+
+  section.what-we-do {
+    padding-left: 30px;
+  }
+
+  section.what-we-do article {
+    padding: 40px 0 0 0;
+    background-size: 200px auto;
+    background-position: right top;
+  }
+
+  section.product {
+    padding-left: 50px;
+  }
+
+  section.product article {
+    background-position: 90% 0;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    h1 { font-size: 1em; }
-    h3 { font-size: .9em; }
-    a.btn { font-size: .7em; }
+  h1 {
+    font-size: 1em;
+  }
 
-    header { background-size: 600px auto; height: 260px; background-position: right top; }
-    header a.logo { width: 200px; top: 15px; }
-    header div.hero { width: 50%; top: 170px; }
-    header div.hero h1 { margin-bottom: 15px; }
+  h3 {
+    font-size: .9em;
+  }
 
-    section.what-we-do article {
-        padding: 40px 0 0 0;
-        background-size: 150px auto;
-        min-height: initial;
-    }
+  a.btn {
+    font-size: .7em;
+  }
 
-    section.contact-us aside { width: 100%; float: none; text-align: left;   }
-    section.contact-us aside .content.contact-location p { margin: 0; }
-    section.contact-us div.contact-row {
-        width: 100%;
-        padding-bottom: 1%;
-    }
-    section.contact-us aside div.content {
-        margin: 8px 20px 8px 0;
-        padding: 5px 0 10px 120px;
-        background-size: 20px 20px;
-        background-position: 60px 5px;
-    }
+  header {
+    background-size: 600px auto;
+    height: 260px;
+    background-position: right top;
+  }
 
-    nav { margin: 0; }
-    nav > ul { padding: 50px 35px;  }
+  header a.logo {
+    width: 200px;
+    top: 15px;
+  }
 
+  header div.hero {
+    width: 50%;
+    top: 170px;
+  }
 
-    footer { margin: 0; padding: 0; }
-    footer h1 { margin: 0; padding: 0; }
+  header div.hero h1 {
+    margin-bottom: 15px;
+  }
+
+  section.what-we-do article {
+    padding: 40px 0 0 0;
+    background-size: 150px auto;
+    min-height: initial;
+  }
+
+  section.contact-us aside {
+    width: 100%;
+    float: none;
+    text-align: left;
+  }
+
+  section.contact-us aside .content.contact-location p {
+    margin: 0;
+  }
+
+  section.contact-us div.contact-row {
+    width: 100%;
+    padding-bottom: 1%;
+  }
+
+  section.contact-us aside div.content {
+    margin: 8px 20px 8px 0;
+    padding: 5px 0 10px 120px;
+    background-size: 20px 20px;
+    background-position: 60px 5px;
+  }
+
+  nav {
+    margin: 0;
+  }
+
+  nav > ul {
+    padding: 50px 35px;
+  }
+
+  footer {
+    margin: 0;
+    padding: 0;
+  }
+
+  footer h1 {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 568px) {
-    header { background-size: 568px auto; height: 260px; background-position: right top; }
-    nav > ul > li { float: left; font-size: 1em; }
+  header {
+    background-size: 568px auto;
+    height: 260px;
+    background-position: right top;
+  }
+
+  nav > ul > li {
+    float: left;
+    font-size: 1em;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    h1 { font-size: .8em; }
-    h3 { font-size: .6em; }
-    a.btn { font-size: .9em; }
+  h1 {
+    font-size: .8em;
+  }
 
-    header { background-size: 480px auto; height: 260px; background-position: left top; }
-    header a.logo { left: 250px; margin-right: 0; }
-    header div.hero { width: 50%; left: 233px; top: 150px; }
-    header div.hero h1 { margin-bottom: 15px; font-size: 1em; }
+  h3 {
+    font-size: .6em;
+  }
 
-    section.what-we-do { margin: 0; padding: 5px 20px; }
-    section.what-we-do article { padding: 50px 0 0 0; }
+  a.btn {
+    font-size: .9em;
+  }
 
-    section.testimonials { height: 300px; padding-bottom: 0; }
-    section.testimonials article { padding: 15px 0; }
-    section.testimonials article .content { width: 100%; }
-    section.testimonials article .content h1 { margin-bottom: 0; }
-    section.testimonials article .content blockquote {
-        background-position: 140px top;
-        display: block;
-        margin: 0;
-        height: 150px;
-        float: none;
-    }
-    section.testimonials article .content blockquote p {
-        margin: 0;
-        padding-top: 150px;
-    }
-    section.testimonials article .content blockquote p.credit {
-        color: darkslategrey;
-        font-size: 1.5em;
-        font-weight: bold;
-        margin: 0;
-        line-height: 1em;
-    }
-    section.testimonials article .content blockquote p.quote {
-        margin:0;
-        padding: 0;
-    }
+  header {
+    background-size: 480px auto;
+    height: 260px;
+    background-position: left top;
+  }
 
-    section.product {
-        padding-top: 20px;
-        height: 200px;
-        padding-left: 40px;
-        float: none;
-    }
-    section.product article p { width: 100%; }
-    section.product article img { height: 40px; padding: 0; }
-    section.product article {
-        padding-top: 40px;
-        background-size: 180px auto;
-        min-height: 250px;
-    }
+  header a.logo {
+    left: 250px;
+    margin-right: 0;
+  }
 
-    nav { width: 250px; }
-    nav > ul { padding: 0 25px; }
-    nav > ul > li { float: none; font-size: .8em; }
+  header div.hero {
+    width: 50%;
+    left: 233px;
+    top: 150px;
+  }
+
+  header div.hero h1 {
+    margin-bottom: 15px;
+    font-size: 1em;
+  }
+
+  section.what-we-do {
+    margin: 0;
+    padding: 5px 20px;
+  }
+
+  section.what-we-do article {
+    padding: 50px 0 0 0;
+  }
+
+  section.testimonials {
+    height: 300px;
+    padding-bottom: 0;
+  }
+
+  section.testimonials article {
+    padding: 15px 0;
+  }
+
+  section.testimonials article .content {
+    width: 100%;
+  }
+
+  section.testimonials article .content h1 {
+    margin-bottom: 0;
+  }
+
+  section.testimonials article .content blockquote {
+    background-position: 140px top;
+    display: block;
+    margin: 0;
+    height: 150px;
+    float: none;
+  }
+
+  section.testimonials article .content blockquote p {
+    margin: 0;
+    padding-top: 150px;
+  }
+
+  section.testimonials article .content blockquote p.credit {
+    color: darkslategrey;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1em;
+  }
+
+  section.testimonials article .content blockquote p.quote {
+    margin: 0;
+    padding: 0;
+  }
+
+  section.product {
+    padding-top: 20px;
+    height: 200px;
+    padding-left: 40px;
+    float: none;
+  }
+
+  section.product article p {
+    width: 100%;
+  }
+
+  section.product article img {
+    height: 40px;
+    padding: 0;
+  }
+
+  section.product article {
+    padding-top: 40px;
+    background-size: 180px auto;
+    min-height: 250px;
+  }
+
+  nav {
+    width: 250px;
+  }
+
+  nav > ul {
+    padding: 0 25px;
+  }
+
+  nav > ul > li {
+    float: none;
+    font-size: .8em;
+  }
 }
 
 @media screen and (max-width: 414px) {
-    header { background-size: 414px auto; height: 250px; background-position: left top; }
-    header a.logo { top: 25px; width: 100px;}
-    header div.hero { left: 240px; top: 150px; width: 30%; }
+  header {
+    background-size: 414px auto;
+    height: 250px;
+    background-position: left top;
+  }
 
-    section.testimonials { height: 330px; }
-    section.testimonials article h1 { padding-bottom: 10px; }
-    section.testimonials article .content blockquote {
-        background-position: 110px top;
-    }
+  header a.logo {
+    top: 25px;
+    width: 100px;
+  }
 
-    section.product {
-        padding-left: 40px;
+  header div.hero {
+    left: 240px;
+    top: 150px;
+    width: 30%;
+  }
 
-    }
-    section.product article img { padding: 0; }
-    section.product article {
-        padding-top: 10px;
-        min-height: 300px;
-        background-position: 160px 25px;
-    }
+  section.testimonials {
+    height: 330px;
+  }
+
+  section.testimonials article h1 {
+    padding-bottom: 10px;
+  }
+
+  section.testimonials article .content blockquote {
+    background-position: 110px top;
+  }
+
+  section.product {
+    padding-left: 40px;
+
+  }
+
+  section.product article img {
+    padding: 0;
+  }
+
+  section.product article {
+    padding-top: 10px;
+    min-height: 300px;
+    background-position: 160px 25px;
+  }
 }
 
 @media screen and (max-width: 384px) {
-    a.btn { font-size: .8em; }
+  a.btn {
+    font-size: .8em;
+  }
 
-    header a.logo { left: 220px; top: 30px; }
-    header div.hero { left: 200px; top: 140px; }
+  header a.logo {
+    left: 220px;
+    top: 30px;
+  }
 
-    section.testimonials article .content blockquote {
-        background-position: 90px top;
-    }
+  header div.hero {
+    left: 200px;
+    top: 140px;
+  }
 
-    section.product {
-        height: 220px;
-    }
+  section.testimonials article .content blockquote {
+    background-position: 90px top;
+  }
+
+  section.product {
+    height: 220px;
+  }
 }
 
 @media screen and (max-width: 375px) {
-    h1 { font-size: .8em; }
-    h3 { font-size: .6em; }
-    h4 { font-size: .6em; }
-    a.btn { font-size: .6em; }
+  h1 {
+    font-size: .8em;
+  }
 
-    header { background-size: 375px auto; height: 200px; background-position: left top; }
-    header a.logo { left: 220px; height: 40px; top: 5px; width: 100px;}
-    header div.hero { left: 200px; top: 100px; }
-    header div.hero h1 { margin-bottom: 15px; font-size: .8em; }
+  h3 {
+    font-size: .6em;
+  }
 
-    section.testimonials { height: 370px; }
+  h4 {
+    font-size: .6em;
+  }
 
-   section.product {
-       padding: 10px 10px;
-       height: 250px;
-       width: auto;
-       margin: 0;
-   }
-   section.product article img { height: 30px; padding: 0; }
-   section.product article {
-       padding: 0 10px;
-       background-size: 130px auto;
-       background-position: 180px 110px;
-       min-height: 330px;
-   }
+  a.btn {
+    font-size: .6em;
+  }
 
-   section.contact-us { margin:0; padding: 0; width: 100%; }
-   section.contact-us aside div.content {
-       margin: 0;
-       padding: 0 0 10px 100px;
-       background-size: 10px 10px;
-       background-position: 55px 5px;
-   }
+  header {
+    background-size: 375px auto;
+    height: 200px;
+    background-position: left top;
+  }
 
-    nav { width: 150px; margin-top: 0; padding-top: 10px; }
-    nav > ul > li { font-size: .6em; }
+  header a.logo {
+    left: 220px;
+    height: 40px;
+    top: 5px;
+    width: 100px;
+  }
+
+  header div.hero {
+    left: 200px;
+    top: 100px;
+  }
+
+  header div.hero h1 {
+    margin-bottom: 15px;
+    font-size: .8em;
+  }
+
+  section.testimonials {
+    height: 370px;
+  }
+
+  section.product {
+    padding: 10px 10px;
+    height: 250px;
+    width: auto;
+    margin: 0;
+  }
+
+  section.product article img {
+    height: 30px;
+    padding: 0;
+  }
+
+  section.product article {
+    padding: 0 10px;
+    background-size: 130px auto;
+    background-position: 180px 110px;
+    min-height: 330px;
+  }
+
+  section.contact-us {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  section.contact-us aside div.content {
+    margin: 0;
+    padding: 0 0 10px 100px;
+    background-size: 10px 10px;
+    background-position: 55px 5px;
+  }
+
+  nav {
+    width: 150px;
+    margin-top: 0;
+    padding-top: 10px;
+  }
+
+  nav > ul > li {
+    font-size: .6em;
+  }
 }
 
 @media screen and (max-width: 320px) {
-    header a.logo { left: 170px; }
-    header div.hero { left: 168px; }
-    a.btn { font-size: .5em; }
+  header a.logo {
+    left: 170px;
+  }
 
-    section.testimonials article .content blockquote {
-        background-position: 58px top;
-    }
+  header div.hero {
+    left: 168px;
+  }
 
-    section.product article {
-        padding: 0 5px;
-        background-position: 160px 110px;
-    }
+  a.btn {
+    font-size: .5em;
+  }
+
+  section.testimonials article .content blockquote {
+    background-position: 58px top;
+  }
+
+  section.product article {
+    padding: 0 5px;
+    background-position: 160px 110px;
+  }
 }
