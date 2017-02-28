@@ -118,7 +118,7 @@ section.what-we-do {
 }
 
 section.what-we-do article {
-  padding: 0 0 0 550px;
+  padding: 0 0 0 60%;
   background: url(../images/manakn.png) no-repeat 5% 30%;
   min-height: 220px;
 }
@@ -137,34 +137,35 @@ section.testimonials {
 
 section.testimonials article {
   color: #3b4e5b;
-  padding-top: 180px;
+  padding-top: 10%;
   margin-left: auto;
   margin-right: auto;
 }
 
-section.testimonials article .content {
+section.testimonials article {
   margin-left: auto;
   margin-right: auto;
   width: 60%;
 }
 
-section.testimonials article .content h1 {
-  margin-bottom: 10%;
-  text-align: center;
-}
-
-section.testimonials article .content blockquote {
-  background: url(../images/man.png) no-repeat 0 20px;
+section.testimonials article blockquote {
   display: block;
   margin-bottom: 15px;
-  height: 150px;
 }
 
-section.testimonials article .content blockquote p {
+.martin-luther-king-jr-img {
+  background: url(../images/martin-luther-king-jr.png) no-repeat 0 20px;
+}
+
+.charles-darwin-img {
+  background: url(../images/charles-darwin.png) no-repeat 0 20px;
+}
+
+section.testimonials article.content blockquote p {
   margin: 5px 5px 20px 150px;
 }
 
-section.testimonials article .content blockquote p.credit {
+section.testimonials article.content blockquote p.credit {
   color: darkslategrey;
   font-size: 2em;
   font-weight: bold;
@@ -173,7 +174,7 @@ section.testimonials article .content blockquote p.credit {
   line-height: 2em;
 }
 
-section.testimonials article .content blockquote p.credit small {
+section.testimonials article.content blockquote p.credit small {
   font-size: small;
 }
 
@@ -326,36 +327,55 @@ footer h4 {
 
 /* Tablet landscape */
 @media screen and (max-width: 1024px) {
+  /* nav */
   nav > ul {
     padding-left: 40%;
   }
 
+  /* header */
   header a.logo {
     width: 35%;
     left: 3%;
   }
-
   header div.hero {
     left: 3%;
   }
 
+  /* what we do section */
   section.what-we-do article {
     padding: 0 0 0 360px;
     background-size: 340px auto;
-    background-position: 0 120px;
-    min-height: 450px;
+    background-position: 0 80px;
+    min-height: 320px;
   }
 
+  /* testimonials section */
   section.testimonials {
     height: 400px;
   }
-
-  section.testimonials article .content {
+  section.testimonials article.content {
     width: 85%;
   }
 
-  section.testimonials article .content h1 {
-    margin-bottom: 3%;
+  /* product */
+  section.product {
+    padding-left: 10px;
+    padding-right: 0;
+  }
+  section.product article img {
+    height: 60px;
+  }
+  section.product article {
+    background-position: 96% 50px;
+    background-size: 350px auto;
+    margin-bottom: 0;
+  }
+
+  /* contact us section */
+  section.contact-us article {
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -363,49 +383,45 @@ footer h4 {
   h1 {
     font-size: 2.2em;
   }
-
   h3 {
     font-size: 1.5em;
     margin-bottom: 0;
   }
 
-  a.btn {
-    font-size: 1em;
-  }
-
+  /* nav */
   nav {
     padding: 40px 0 0 0;
   }
-
   nav > ul {
     padding-left: 25%;
   }
-
   nav ul li a {
     font-size: .9em;
   }
 
+  /* header */
   header {
     background-size: 768px auto;
     height: 300px;
   }
-
   header a.logo {
     width: 150px;
     height: 50px;
     left: 6%;
   }
-
   header div.hero {
     width: auto;
     top: 50%;
     left: 6%;
   }
-
   header div.hero h1 {
     margin-bottom: .5em;
   }
+  a.btn {
+    font-size: 1em;
+  }
 
+  /* what we do section */
   section.what-we-do article {
     padding: 10px 0 0 0;
     background-size: 180px auto;
@@ -413,81 +429,87 @@ footer h4 {
     min-height: 300px;
   }
 
-  section.testimonials article .content {
+  /* testimonials section */
+  section.testimonials article.content {
     width: 95%;
   }
 
+  /* product section */
   section.product {
     padding-top: 15px;
-    padding-left: 100px;
+    padding-left: 10px;
     padding-right: 0;
-    height: 300px;
+    height: 550px;
   }
-
   section.product article {
-    background-position: 80% 0;
     background-size: 250px auto;
     padding-top: 20px;
     margin-bottom: 0;
     min-height: 400px;
   }
-
   section.product article p {
-    width: 70%;
+    width: 62%;
   }
-
   section.product article img {
     height: 50px;
   }
 
+  /* contact us section */
   section.contact-us article {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-
   section.contact-us aside .content.contact-email {
     background-size: 30px 30px;
   }
-
   section.contact-us aside .content.contact-location {
     background-size: 30px 30px;
   }
-
   section.contact-us aside .content.contact-phone {
     background-size: 30px 30px;
   }
 }
 
 @media screen and (max-width: 667px) {
+  /* nav */
   nav {
     padding: 50px 0 0 0;
   }
-
   nav > ul {
     padding-left: 25%;
   }
-
   nav ul li a {
     font-size: .7em;
   }
 
+  /* what we do section */
   section.what-we-do {
     padding-left: 30px;
   }
-
   section.what-we-do article {
     padding: 40px 0 0 0;
     background-size: 200px auto;
     background-position: right top;
   }
 
-  section.product {
-    padding-left: 50px;
+  /* testimonials section */
+  section.testimonials {
+    padding: 10px;
   }
 
+  /* product section */
+  section.product {
+    padding: 0;
+    height: 600px;
+  }
   section.product article {
-    background-position: 90% 0;
+    background-position: 98% 50px;
+    background-size: 260px auto;
+    padding-right: 0;
+  }
+  section.product article p {
+    width: 58%;
   }
 }
 
@@ -495,56 +517,67 @@ footer h4 {
   h1 {
     font-size: 1em;
   }
-
   h3 {
     font-size: .9em;
   }
-
   a.btn {
     font-size: .7em;
   }
 
+  /* header */
   header {
     background-size: 600px auto;
     height: 260px;
     background-position: right top;
   }
-
   header a.logo {
     width: 200px;
     top: 15px;
   }
-
   header div.hero {
     width: 50%;
     top: 170px;
   }
-
   header div.hero h1 {
     margin-bottom: 15px;
   }
 
+  /* what we do section */
   section.what-we-do article {
     padding: 40px 0 0 0;
     background-size: 150px auto;
     min-height: initial;
   }
 
+  /* testimonials section */
+  section.testimonials {
+    margin: 0;
+    padding: 0;
+    max-height: 300px;
+  }
+  section.testimonials article.content blockquote p.credit {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+
+  /* product section */
+  section.product article p {
+    width: 55%;
+  }
+
+  /* contact us section */
   section.contact-us aside {
     width: 100%;
     float: none;
     text-align: left;
   }
-
   section.contact-us aside .content.contact-location p {
     margin: 0;
   }
-
   section.contact-us div.contact-row {
     width: 100%;
     padding-bottom: 1%;
   }
-
   section.contact-us aside div.content {
     margin: 8px 20px 8px 0;
     padding: 5px 0 10px 120px;
@@ -552,19 +585,19 @@ footer h4 {
     background-position: 60px 5px;
   }
 
+  /* nav */
   nav {
     margin: 0;
   }
-
   nav > ul {
     padding: 50px 35px;
   }
 
+  /* footer */
   footer {
     margin: 0;
     padding: 0;
   }
-
   footer h1 {
     margin: 0;
     padding: 0;
@@ -578,6 +611,18 @@ footer h4 {
     background-position: right top;
   }
 
+  /* product section */
+  section.product {
+    height: 670px;
+  }
+  section.product article p {
+    width: 50%;
+  }
+  section.product article img {
+    padding-top: 0;
+    height: 45px;
+  }
+
   nav > ul > li {
     float: left;
     font-size: 1em;
@@ -588,119 +633,90 @@ footer h4 {
   h1 {
     font-size: .8em;
   }
-
   h3 {
     font-size: .6em;
   }
 
-  a.btn {
-    font-size: .9em;
-  }
-
+  /* header */
   header {
     background-size: 480px auto;
     height: 260px;
     background-position: left top;
   }
-
   header a.logo {
     left: 250px;
     margin-right: 0;
   }
-
   header div.hero {
     width: 50%;
     left: 233px;
     top: 150px;
   }
-
   header div.hero h1 {
     margin-bottom: 15px;
     font-size: 1em;
   }
+  a.btn {
+    font-size: .9em;
+  }
 
+  /* what we do section */
   section.what-we-do {
     margin: 0;
     padding: 5px 20px;
   }
-
   section.what-we-do article {
     padding: 50px 0 0 0;
   }
 
+  /* testimonials section */
   section.testimonials {
-    height: 300px;
+    height: 260px;
     padding-bottom: 0;
   }
-
   section.testimonials article {
     padding: 15px 0;
   }
-
-  section.testimonials article .content {
+  section.testimonials article.content {
     width: 100%;
   }
-
-  section.testimonials article .content h1 {
-    margin-bottom: 0;
-  }
-
-  section.testimonials article .content blockquote {
-    background-position: 140px top;
-    display: block;
-    margin: 0;
-    height: 150px;
-    float: none;
-  }
-
-  section.testimonials article .content blockquote p {
-    margin: 0;
-    padding-top: 150px;
-  }
-
-  section.testimonials article .content blockquote p.credit {
-    color: darkslategrey;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin: 0;
+  section.testimonials article.content blockquote p.credit {
+    font-size: 1em;
     line-height: 1em;
   }
 
-  section.testimonials article .content blockquote p.quote {
-    margin: 0;
-    padding: 0;
-  }
-
+  /* product section */
   section.product {
-    padding-top: 20px;
-    height: 200px;
-    padding-left: 40px;
+    height: 700px;
+    padding: 0;
     float: none;
   }
-
+  section.product article {
+    padding: 10px;
+    background-position: 98% 400px;
+    background-size: 260px auto;
+    height: 650px;
+  }
   section.product article p {
+
     width: 100%;
   }
-
   section.product article img {
     height: 40px;
     padding: 0;
   }
-
   section.product article {
     padding-top: 40px;
     background-size: 180px auto;
-    min-height: 250px;
   }
 
+  /* nav section */
   nav {
     width: 250px;
   }
-
   nav > ul {
     padding: 0 25px;
   }
-
   nav > ul > li {
     float: none;
     font-size: .8em;
@@ -708,72 +724,69 @@ footer h4 {
 }
 
 @media screen and (max-width: 414px) {
+  /* header */
   header {
     background-size: 414px auto;
     height: 250px;
     background-position: left top;
   }
-
   header a.logo {
     top: 25px;
     width: 100px;
   }
-
   header div.hero {
-    left: 240px;
-    top: 150px;
-    width: 30%;
+    left: 190px;
+    top: 120px;
+    width: 50%;
   }
 
+  /* testimonials */
   section.testimonials {
     height: 330px;
   }
-
-  section.testimonials article h1 {
-    padding-bottom: 10px;
-  }
-
   section.testimonials article .content blockquote {
     background-position: 110px top;
   }
-
-  section.product {
-    padding-left: 40px;
-
+  section.testimonials article.content blockquote p.credit {
+    font-size: .8em;
+    line-height: .8em;
+  }
+  section.testimonials article.content blockquote p.quote {
+    font-size: 1em;
+    line-height: 1em;
   }
 
-  section.product article img {
-    padding: 0;
-  }
-
+  /* product section */
   section.product article {
-    padding-top: 10px;
-    min-height: 300px;
-    background-position: 160px 25px;
+    background-position: 200px 445px;
+    height: 680px;
   }
 }
 
 @media screen and (max-width: 384px) {
+  /* header */
   a.btn {
-    font-size: .8em;
+    font-size: .6em;
   }
-
   header a.logo {
     left: 220px;
     top: 30px;
   }
-
   header div.hero {
-    left: 200px;
-    top: 140px;
+    left: 150px;
+    top: 130px;
   }
 
-  section.testimonials article .content blockquote {
-    background-position: 90px top;
+  section.testimonials {
+    height: 400px;
   }
 
   section.product {
-    height: 220px;
+    height: 700px;
+  }
+  section.product article {
+    background-position: 99% 450px;
+    height: 690px;
   }
 }
 
@@ -781,71 +794,66 @@ footer h4 {
   h1 {
     font-size: .8em;
   }
-
   h3 {
     font-size: .6em;
   }
-
   h4 {
     font-size: .6em;
   }
 
+  /* header */
   a.btn {
     font-size: .6em;
   }
-
   header {
     background-size: 375px auto;
     height: 200px;
     background-position: left top;
   }
-
   header a.logo {
     left: 220px;
     height: 40px;
     top: 5px;
     width: 100px;
   }
-
   header div.hero {
-    left: 200px;
     top: 100px;
   }
-
   header div.hero h1 {
     margin-bottom: 15px;
     font-size: .8em;
   }
 
-  section.testimonials {
-    height: 370px;
+  /* testimonials section */
+  section.testimonials article.content blockquote p.quote {
+    font-size: .95em;
+    line-height: .95em;
   }
 
+  /* product section */
   section.product {
     padding: 10px 10px;
-    height: 250px;
+    height: 680px;
     width: auto;
     margin: 0;
   }
-
   section.product article img {
     height: 30px;
     padding: 0;
   }
-
   section.product article {
     padding: 0 10px;
     background-size: 130px auto;
-    background-position: 180px 110px;
+    background-position: 180px 450px;
     min-height: 330px;
   }
 
+  /* contact us section */
   section.contact-us {
     margin: 0;
     padding: 0;
     width: 100%;
   }
-
   section.contact-us aside div.content {
     margin: 0;
     padding: 0 0 10px 100px;
@@ -853,12 +861,12 @@ footer h4 {
     background-position: 55px 5px;
   }
 
+  /* nav */
   nav {
     width: 150px;
     margin-top: 0;
     padding-top: 10px;
   }
-
   nav > ul > li {
     font-size: .6em;
   }
@@ -868,21 +876,25 @@ footer h4 {
   header a.logo {
     left: 170px;
   }
-
   header div.hero {
-    left: 168px;
+    left: 138px;
   }
-
   a.btn {
     font-size: .5em;
   }
 
-  section.testimonials article .content blockquote {
-    background-position: 58px top;
+  /* testimonials section */
+  section.testimonials article.content blockquote p.quote {
+    font-size: .75em;
+    line-height: .75em;
   }
 
+  section.product {
+    height: 730px;
+  }
   section.product article {
     padding: 0 5px;
-    background-position: 160px 110px;
+    background-position: 150px 520px;
+    height: 730px;
   }
 }
