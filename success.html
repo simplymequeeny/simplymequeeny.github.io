@@ -20,9 +20,9 @@
        $('#lblPhone').html(localStorage.getItem('phone'));
        $('#lblEmail').html(localStorage.getItem('email'));
 
-       var make = localStorage.getItem('make');
-       var model = localStorage.getItem('model');
-       var year = localStorage.getItem('year');
+       var make = localStorage.getItem('make').toLowerCase();
+       var model = localStorage.getItem('model').toLowerCase();
+       var year = localStorage.getItem('year').toLowerCase();
 
        var link = $('#jdPowerLink');
        link.prop('text', make + ' ' + model + ' ' + year);
@@ -62,7 +62,7 @@
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td colspan="2"><a id="jdPowerLink" title="View Vehicle Pricing & Reviews"></a></td>
+          <td colspan="2"><a id="jdPowerLink" onclick="alert(this.href);" title="View Vehicle Pricing & Reviews"></a></td>
         </tr>
       </table>
       <br>
