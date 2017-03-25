@@ -8,58 +8,6 @@
       padding-left: 5px;
     }
   </style>
-  <script src="js/lib/jquery-3.2.0.min.js" type="text/javascript"></script>
-  <script src="js/lib/jquery.validate.js"></script>
-
-  <script src="js/database.js" type="text/javascript"></script>
-  <script src="js/dal.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    const btnSubmit_click = function() {
-      const form = $('#frmNew');
-      form.validate();
-
-      if (form.valid()) {
-        var seller = $('#sellerName').val();
-        var address = $('#address').val();
-        var city = $('#city').val();
-        var phone = $('#phone').val();
-        var email = $('#emailAddress').val();
-        var make = $('#make').val();
-        var model = $('#model').val();
-        var year = $('#year').val();
-
-        DAL.save([seller, address, city, phone, email, make, model, year],
-          function() {
-            localStorage.setItem("sellerName", seller);
-            localStorage.setItem("address", address);
-            localStorage.setItem("city", city);
-            localStorage.setItem("phone", phone);
-            localStorage.setItem("email", email);
-            localStorage.setItem("make", make);
-            localStorage.setItem("model", model);
-            localStorage.setItem("year", year);
-
-            $(location).prop('href','success.html');
-          });
-      }
-    };
-
-    const init = function() {
-      DAL.initDB();
-
-      $.validator.addMethod("checkphone", function(value, element, regex) {
-        const re = new RegExp(regex);
-        return this.optional(element) || re.test(value);
-      }, "Please enter a valid phone number format.");
-    };
-
-    $(document).ready(function() {
-      init();
-
-      $('#btnSubmit').on('click', btnSubmit_click);
-    });
-  </script>
-
   <title>PROG2070 - Assignment 4 - Web Application - New Item</title>
 </head>
 <body>
@@ -115,5 +63,56 @@
   </form>
   <br>
   <a href="index.html">Home</a>
+
+  <script src="js/lib/jquery-3.2.0.min.js" type="text/javascript"></script>
+  <script src="js/lib/jquery.validate.js"></script>
+  <script src="js/database.js" type="text/javascript"></script>
+  <script src="js/dal.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    const btnSubmit_click = function() {
+      const form = $('#frmNew');
+      form.validate();
+
+      if (form.valid()) {
+        var seller = $('#sellerName').val();
+        var address = $('#address').val();
+        var city = $('#city').val();
+        var phone = $('#phone').val();
+        var email = $('#emailAddress').val();
+        var make = $('#make').val();
+        var model = $('#model').val();
+        var year = $('#year').val();
+
+        DAL.save([seller, address, city, phone, email, make, model, year],
+          function() {
+            localStorage.setItem("sellerName", seller);
+            localStorage.setItem("address", address);
+            localStorage.setItem("city", city);
+            localStorage.setItem("phone", phone);
+            localStorage.setItem("email", email);
+            localStorage.setItem("make", make);
+            localStorage.setItem("model", model);
+            localStorage.setItem("year", year);
+
+            $(location).prop('href','success.html');
+          });
+      }
+    };
+
+    const init = function() {
+      DAL.initDB();
+
+      $.validator.addMethod("checkphone", function(value, element, regex) {
+        const re = new RegExp(regex);
+        return this.optional(element) || re.test(value);
+      }, "Please enter a valid phone number format.");
+    };
+
+    $(document).ready(function() {
+      init();
+
+      $('#btnSubmit').on('click', btnSubmit_click);
+    });
+  </script>
 </body>
 </html>
