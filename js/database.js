@@ -25,11 +25,12 @@ const DB = {
   },
   createTables: function() {
     db.transaction(function(tx) {
+      /*
       tx.executeSql('DROP TABLE IF EXISTS iteminfo;',
         [],
         successExecuteSql('Table iteminfo dropped successfully'),
         errorHandler);
-
+      */
       tx.executeSql('CREATE TABLE IF NOT EXISTS iteminfo (' +
         'id INTEGER PRIMARY KEY AUTOINCREMENT, ' +
         'name VARCHAR(50) NOT NULL, ' +
