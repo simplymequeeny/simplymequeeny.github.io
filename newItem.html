@@ -11,7 +11,7 @@
   <title>PROG2070 - Assignment 4 - Web Application - New Item</title>
 </head>
 <body>
-  <form id="frmNew" method="post">
+  <form id="frmNew" action="success.html" method="post">
     <fieldset>
       <legend>Seller</legend>
       <label for="sellerName">Name:</label>
@@ -93,8 +93,6 @@
             localStorage.setItem("make", make);
             localStorage.setItem("model", model);
             localStorage.setItem("year", year);
-
-            $(location).prop('href','success.html');
           });
       }
     };
