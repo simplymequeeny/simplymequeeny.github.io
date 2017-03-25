@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .error {
+      color: maroon;
+      padding-left: 5px;
+    }
+  </style>
+  <script src="js/lib/jquery-3.2.0.min.js" type="text/javascript"></script>
+  <script src="js/lib/jquery.validate.js"></script>
+
+  <script src="js/database.js" type="text/javascript"></script>
+  <script src="js/dal.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    const btnSubmit_click = function() {
+      const form = $('#frmNew');
+      form.validate();
+
+      if (form.valid()) {
+        var seller = $('#sellerName').val();
+        var address = $('#address').val();
+        var city = $('#city').val();
+        var phone = $('#phone').val();
+        var email = $('#emailAddress').val();
+        var make = $('#make').val();
+        var model = $('#model').val();
+        var year = $('#year').val();
+
+        DAL.save([seller, address, city, phone, email, make, model, year],
+          function() {
+            localStorage.setItem("sellerName", seller);
+            localStorage.setItem("address", address);
+            localStorage.setItem("city", city);
+            localStorage.setItem("phone", phone);
+            localStorage.setItem("email", email);
+            localStorage.setItem("make", make);
+            localStorage.setItem("model", model);
+            localStorage.setItem("year", year);
+
+            $(location).prop('href','success.html');
+          });
+      }
+    };
+
+    const init = function() {
+      DAL.initDB();
+
+      $.validator.addMethod("checkphone", function(value, element, regex) {
+        const re = new RegExp(regex);
+        return this.optional(element) || re.test(value);
+      }, "Please enter a valid phone number format.");
+    };
+
+    $(document).ready(function() {
+      init();
+
+      $('#btnSubmit').on('click', btnSubmit_click);
+    });
+  </script>
+
+  <title>PROG2070 - Assignment 4 - Web Application - New Item</title>
+</head>
+<body>
+  <form id="frmNew" method="post">
+    <fieldset>
+      <legend>Seller</legend>
+      <label for="sellerName">Name:</label>
+      <input id="sellerName" type="text" maxlength="50" size="50" name="sellerName"
+             data-rule-required="true" data-msg-required="Seller Name is required">
+
+      <br><br>
+      <fieldset class="ui-widget-content">
+        <legend>Contact Information</legend>
+        <label for="address">Address:</label>
+        <input id="address" type="text" maxlength="30" size="30" name="address"
+               data-rule-required="true" data-msg-required="Address is required"><br>
+
+        <label for="city">City:</label>
+        <input id="city" type="text" maxlength="15" size="15" name="city"
+               data-rule-required="true" data-msg-required="City is required"><br>
+
+        <label for="phone">Phone:</label>
+        <input id="phone" type="text" maxlength="15" size="15" name="phone"
+               data-rule-required="true" data-msg-required="Phone is required"
+               data-rule-checkphone="((\(\d{3}\))|(\d{3}-))\d{3}-\d{4}$"><br>
+
+        <label for="emailAddress">Email:</label>
+        <input id="emailAddress" type="text" maxlength="30" size="30" name="emailAddress"
+               data-rule-required="true" data-msg-required="Email is required"
+               data-rule-email="true" data-msg-email="Please enter a valid email"><br>
+      </fieldset>
+
+      <br>
+      <fieldset class="ui-widget-content">
+        <legend>Vehicle</legend>
+        <label for="make">Make:</label>
+        <input id="make" type="text" maxlength="15" size="15" name="make"
+               data-rule-required="true" data-msg-required="Make is required"><br>
+
+        <label for="model">Model:</label>
+        <input id="model" type="text" maxlength="15" size="15" name="model"
+               data-rule-required="true" data-msg-required="Model is required"><br>
+
+        <label for="year">Year:</label>
+        <input id="year" type="text" maxlength="4" size="4" name="year"
+               data-rule-required="true" data-msg-required="Year is required"
+               data-rule-number=”true” data-msg-number="Please enter a number"><br>
+      </fieldset>
+      <br>
+
+      <button id="btnSubmit" class="ui-button ui-widget ui-corner-all">Submit</button>
+    </fieldset>
+  </form>
+  <br>
+  <a href="index.html">Home</a>
+</body>
+</html>

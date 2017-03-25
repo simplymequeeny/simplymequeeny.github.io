@@ -5,236 +5,46 @@
   <script src="js/lib/jquery-3.2.0.min.js" type="text/javascript"></script>
   <script src="js/lib/jquery.validate.js"></script>
 
-  <link rel="stylesheet" href="css/lib/jquery-ui.theme.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Add a black background color to the top navigation */
+    .topnav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Add a color to the active/current link */
+    .topnav a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
 
   <script src="js/database.js" type="text/javascript"></script>
   <script src="js/dal.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    const btnSubmit_click = function() {
-      const form = $('#frmNew');
-      form.validate();
 
-      if (form.valid()) {
-        var seller = $('#sellerName').val();
-        var address = $('#address').val();
-        var city = $('#city').val();
-        var phone = $('#phone').val();
-        var email = $('#emailAddress').val();
-        var make = $('#make').val();
-        var model = $('#model').val();
-        var year = $('#year').val();
-
-        DAL.save([seller, address, city, phone, email, make, model, year],
-          function() {
-            localStorage.setItem("sellerName", seller);
-            localStorage.setItem("address", address);
-            localStorage.setItem("city", city);
-            localStorage.setItem("phone", phone);
-            localStorage.setItem("email", email);
-            localStorage.setItem("make", make);
-            localStorage.setItem("model", model);
-            localStorage.setItem("year", year);
-
-            $(location).prop('href','result.html');
-          });
-      }
-    };
-
-    const makeSearchActive = function() {
-      $('#new').removeClass('active');
-      $('#newTab').hide();
-      $('#searchTab').show();
-      $('#search').addClass('active');
-    };
-
-    const makeNewActive = function() {
-      $('#search').removeClass('active');
-      $('#searchTab').hide();
-      $('#newTab').show();
-      $('#new').addClass('active');
-    };
-
-    const linkSearch_click = function () {
-      makeSearchActive();
-
-      DAL.selectAll(function(tx, results) {
-        var html = '<table><tr><td>Seller Name</td>' +
-          '<td>Address</th><td>City</th><td>Phone</th><td>Email</th>' +
-          '<td>Make</th><td>Model</th><td>Year</th></tr>';
-
-        console.info(tx);
-        console.info(results);
-        if (results.rows.length > 0) {
-          for (var i = 0; i < results.rows.length; i++) {
-            row = results.rows[i];
-            html += '<tr>' +
-              '<td>' + row['name'] + '</td>' +
-              '<td>' + row['address'] + '</td>' +
-              '<td>' + row['city'] + '</td>' +
-              '<td>' + row['phone'] + '</td>' +
-              '<td>' + row['email'] + '</td>' +
-              '<td>' + row['make'] + '</td>' +
-              '<td>' + row['model'] + '</td>' +
-              '<td>' + row['year'] + '</td>' +
-              '</tr>';
-          }
-        }
-        else {
-          html += '<tr><td colspan="8">No records found</td></tr>';
-        }
-
-        html += '</table>';
-
-        $('#dataTable').html(html);
-      });
-    };
-
-    const linkNew_click = function() {
-      makeNewActive();
-    };
-
-    const initDB = function() {
-      try {
-        DB.createDatabase();
-        console.log(db);
-        if (db) {
-          DB.createTables();
-        }
-      } catch(e) {
-        console.error(e);
-      }
-    };
-
-    const init = function() {
-      initDB();
-
-      makeNewActive();
-
-      $.validator.addMethod("checkphone", function(value, element, regex) {
-        const re = new RegExp(regex);
-        return this.optional(element) || re.test(value);
-      }, "Please enter a valid phone number format.");
-
-      $('#displayRecord').hide();
-    };
-
-    $(document).ready(function() {
-      init();
-
-      $('#btnSubmit').on('click', btnSubmit_click);
-      $('#search').on('click', linkSearch_click);
-      $('#new').on('click', linkNew_click);
-    });
-  </script>
-
-  <title>PROG2070 - Assignment 4 - Web Application</title>
+  <title>PROG2070 - Assignment 4 - Web Application - Home</title>
 </head>
 <body>
-
-  <div id="main">
-    <div class="topnav" id="myTopnav">
-      <a id="new" class="" href="#newTab">New</a>
-      <a id="search" class="" href="#searchTab">Search</a>
-    </div>
-
-    <div id="newTab">
-      <form id="frmNew" method="post">
-        <fieldset>
-          <legend>Seller</legend>
-          <label for="sellerName">Name:</label>
-          <input id="sellerName" type="text" maxlength="50" size="50" name="sellerName"
-                 data-rule-required="true" data-msg-required="Seller Name is required">
-
-          <br><br>
-          <fieldset class="ui-widget-content">
-            <legend>Contact Information</legend>
-            <label for="address">Address:</label>
-            <input id="address" type="text" maxlength="30" size="30" name="address"
-                   data-rule-required="true" data-msg-required="Address is required"><br>
-
-            <label for="city">City:</label>
-            <input id="city" type="text" maxlength="15" size="15" name="city"
-                   data-rule-required="true" data-msg-required="City is required"><br>
-
-            <label for="phone">Phone:</label>
-            <input id="phone" type="text" maxlength="15" size="15" name="phone"
-                   data-rule-required="true" data-msg-required="Phone is required"
-                   data-rule-checkphone="((\(\d{3}\))|(\d{3}-))\d{3}-\d{4}$"><br>
-
-            <label for="emailAddress">Email:</label>
-            <input id="emailAddress" type="text" maxlength="30" size="30" name="emailAddress"
-                   data-rule-required="true" data-msg-required="Email is required"
-                   data-rule-email="true" data-msg-email="Please enter a valid email"><br>
-          </fieldset>
-
-          <br>
-          <fieldset class="ui-widget-content">
-            <legend>Vehicle</legend>
-            <label for="make">Make:</label>
-            <input id="make" type="text" maxlength="15" size="15" name="make"
-                   data-rule-required="true" data-msg-required="Make is required"><br>
-
-            <label for="model">Model:</label>
-            <input id="model" type="text" maxlength="15" size="15" name="model"
-                   data-rule-required="true" data-msg-required="Model is required"><br>
-
-            <label for="year">Year:</label>
-            <input id="year" type="text" maxlength="4" size="4" name="year"
-                   data-rule-required="true" data-msg-required="Year is required"
-                   data-rule-number=”true” data-msg-number="Please enter a number"><br>
-          </fieldset>
-          <br>
-
-          <button id="btnSubmit" class="ui-button ui-widget ui-corner-all"> Submit </button>
-        </fieldset>
-      </form>
-    </div>
-
-    <div id="searchTab">
-      <div id="dataTable"></div>
-    </div>
-  </div>
-
-  <div id="displayRecord">
-    <fieldset>
-      <legend>Record saved successfully</legend>
-      <table>
-        <tr>
-          <th>Name</th>
-          <td><label id="lblName"></label></td>
-        </tr>
-        <tr>
-          <th>Address</th>
-          <td><label id="lblAddress"></label></td>
-        </tr>
-        <tr>
-          <th>City</th>
-          <td><label id="lblCity"></label></td>
-        </tr>
-        <tr>
-          <th>Phone</th>
-          <td><label id="lblPhone"></label></td>
-        </tr>
-        <tr>
-          <th>Email</th>
-          <td><label id="lblEmail"></label></td>
-        </tr>
-        <tr>
-          <th>Make</th>
-          <td><label id="lblMake"></label></td>
-        </tr>
-        <tr>
-          <th>Model</th>
-          <td><label id="lblModel"></label></td>
-        </tr>
-        <tr>
-          <th>Year</th>
-          <td><label id="lblYear"></label></td>
-        </tr>
-      </table>
-      <a class="ui-button ui-widget ui-corner-all" href="#">Home</a>
-    </fieldset>
+  <div class="topnav" id="myTopnav">
+    <a href="newItem.html">New</a>
+    <a href="search.html">Search</a>
   </div>
 </body>
 </html>

@@ -2,6 +2,17 @@
  * Created by quennie on 2017-03-24.
  */
 const DAL = {
+  initDB: function() {
+    try {
+      DB.createDatabase();
+      console.log(db);
+      if (db) {
+        DB.createTables();
+      }
+    } catch(e) {
+      console.error(e);
+    }
+  },
   save: function(options, callback) {
     db.transaction(function(tx) {
       tx.executeSql('INSERT INTO iteminfo (' +
