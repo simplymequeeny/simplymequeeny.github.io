@@ -1,5 +1,7 @@
 /**
- * Created by quennie on 2017-03-24.
+ * dal.js
+ * Assignment04
+ * Created by quennie teves on 2017-03-24.
  */
 const DAL = {
   save: function(item) {
@@ -15,11 +17,5 @@ const DAL = {
       }
     }
     callback( data );
-  },
-  print: function() {
-    for (i=0; i < localStorage.length; i++) {
-      var key = localStorage.key(i);
-      console.info(key, localStorage.getItem(key));
-    }
   }
 };
