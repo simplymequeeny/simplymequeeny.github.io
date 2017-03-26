@@ -60,14 +60,14 @@
       $('#lblPhone').html(row.phone);
       $('#lblEmail').html(row.email);
 
-      var make = row.make.toLowerCase();
-      var model = row.model.toLowerCase();
-      var year = row.year.toLowerCase();
+      var make = row.make;
+      var model = row.model;
+      var year = row.year;
 
       var link = $('#jdPowerLink');
       link.prop('text', make + ' ' + model + ' ' + year);
-      link.prop('href', 'http://www.jdpower.com/cars/' + make
-        + '/' + model + '/' + year);
+      link.prop('href', 'http://www.jdpower.com/cars/' + make.toLowerCase()
+        + '/' + model.toLowerCase() + '/' + year.toLowerCase());
     });
   </script>
 </body>
