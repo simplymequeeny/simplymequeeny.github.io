@@ -48,19 +48,21 @@
 
   <script src="js/lib/jquery-3.2.0.min.js" type="text/javascript"></script>
   <script src="js/lib/jquery.validate.js"></script>
-  <script src="js/database.js" type="text/javascript"></script>
   <script src="js/dal.js" type="text/javascript"></script>
   <script>
     $(document).ready(function() {
-      $('#lblName').html(localStorage.getItem('sellerName'));
-      $('#lblAddress').html(localStorage.getItem('address'));
-      $('#lblCity').html(localStorage.getItem('city'));
-      $('#lblPhone').html(localStorage.getItem('phone'));
-      $('#lblEmail').html(localStorage.getItem('email'));
+      var item = localStorage.getItem(localStorage.getItem('itemId'));
 
-      var make = localStorage.getItem('make').toLowerCase();
-      var model = localStorage.getItem('model').toLowerCase();
-      var year = localStorage.getItem('year').toLowerCase();
+      var row =  JSON.parse(item);
+      $('#lblName').html(row.sellerName);
+      $('#lblAddress').html(row.address);
+      $('#lblCity').html(row.city);
+      $('#lblPhone').html(row.phone);
+      $('#lblEmail').html(row.email);
+
+      var make = row.make.toLowerCase();
+      var model = row.model.toLowerCase();
+      var year = row.year.toLowerCase();
 
       var link = $('#jdPowerLink');
       link.prop('text', make + ' ' + model + ' ' + year);

@@ -30,32 +30,27 @@
 
   <script src="js/lib/jquery-3.2.0.min.js" type="text/javascript"></script>
   <script src="js/lib/jquery.validate.js"></script>
-  <script src="js/database.js" type="text/javascript"></script>
   <script src="js/dal.js" type="text/javascript"></script>
   <script type="text/javascript">
     $(document).ready(function() {
-      DAL.initDB();
-
-      DAL.selectAll(function(tx, results) {
+      DAL.selectAll(function(rows) {
         var html = '<table><thead ' +
           'style=" background-color: #4CAF50; font-weight: bolder ;">' +
           '<tr><td>Seller Name</td><td>Address</td><td>City</td><td>Phone</td>' +
           '<td>Email</td><td>Make</td><td>Model</td><td>Year</td></tr></thead>';
 
-        console.info(tx);
-        console.info(results);
-        if (results.rows.length > 0) {
-          for (var i = 0; i < results.rows.length; i++) {
-            row = results.rows[i];
+        if (rows.length > 0) {
+          for (var i = 0; i < rows.length; i++) {
+            var row = rows[i];
             html += '<tr>' +
-              '<td>' + row['name'] + '</td>' +
-              '<td>' + row['address'] + '</td>' +
-              '<td>' + row['city'] + '</td>' +
-              '<td>' + row['phone'] + '</td>' +
-              '<td>' + row['email'] + '</td>' +
-              '<td>' + row['make'] + '</td>' +
-              '<td>' + row['model'] + '</td>' +
-              '<td>' + row['year'] + '</td>' +
+              '<td>' + row.sellerName + '</td>' +
+              '<td>' + row.address + '</td>' +
+              '<td>' + row.city + '</td>' +
+              '<td>' + row.phone + '</td>' +
+              '<td>' + row.email + '</td>' +
+              '<td>' + row.make + '</td>' +
+              '<td>' + row.model + '</td>' +
+              '<td>' + row.year + '</td>' +
               '</tr>';
           }
         }
